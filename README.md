@@ -1,24 +1,37 @@
 # Packer
 
-TODO: Write a gem description
+Solution to problem posed by LS
 
 ## Installation
 
-Add this line to your application's Gemfile:
+To run the tests:
 
-    gem 'packer'
+    $ rake test
 
-And then execute:
+To build and install the gem:
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install packer
+    $ bundle install
+    $ rake build
+    $ gem install pkg/packer-0.0.1.gem
 
 ## Usage
 
-TODO: Write usage instructions here
+Command line options:
+
+    $ packer --help
+    Packer usage:
+       --uri, -u <s>:   Specify Git URI
+       --sha, -s <s>:   SHA1 to check out
+      --name, -n <s>:   Project name
+      --dest, -d <s>:   Destination directory (default: current directory)
+       --version, -v:   Print version and exit
+          --help, -h:   Show this message
+
+To run the server:
+
+    $ thin start -p 4567 -e production
+
+or use the supplied Procfile
 
 ## Contributing
 
