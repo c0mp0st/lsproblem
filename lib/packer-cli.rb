@@ -12,7 +12,7 @@ module Packer
         banner "Packer usage:\n"
         opt :uri, "Specify Git URI", :type => :string
         opt :sha, "SHA1 to check out", :type => :string
-        opt :name, "Project name", :type => :string
+        opt :name, "Project name (used to name tarball)", :type => :string
         opt :dest, "Destination directory", :type => :string, :default => Dir.pwd
       end
     

@@ -8,7 +8,7 @@ To run the tests:
 
     $ rake test
 
-To build and install the gem:
+To build and install the gem (for command line):
 
     $ bundle install
     $ rake build
@@ -31,7 +31,9 @@ To run the server:
 
     $ thin start -p 4567 -e production
 
-or use the supplied Procfile
+or use the supplied Procfile with foreman:
+
+    $ foreman start
 
 ## Contributing
 

@@ -13,12 +13,12 @@ class PackerLibTest < Test::Unit::TestCase
     @packer.cleanup
   end
 
-  def test_instantiation
+  def test_instantiation_and_cleanup
     assert_equal "test", packer.appname
-    assert_block "No tmpdir: #{packer.tmpdir}" do
-      Dir.exists? packer.tmpdir
-    end
+    assert Dir.exists?(packer.tmpdir), "No tmpdir: #{packer.tmpdir}"
     assert_equal "test", packer.builddir
+    packer.cleanup
+    assert ! Dir.exists?(packer.tmpdir), "No tmpdir: #{packer.tmpdir}"
   end
 
   def test_fetch

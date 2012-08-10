@@ -2,6 +2,29 @@ require "packer/version"
 require "tmpdir"
 require "git"
 
+# Processes a GIT URI and outputs a tarball
+# * 'name' is used to name the tarball
+# * 'uri' is the source GIT URI
+# * 'commit' is the GIT commit
+#
+# Initialize a new processor:
+#     p = Packer::Processor.new("name')
+#
+# Fetch a given git repository.  Optionally specify a commit (defaults
+# to master):
+#     p.fetch(uri, commit)
+#
+# Fetch all gem dependencies:
+#     p.build
+#
+# Produce the tarball (returns tar filename):
+#     p.mktar
+#     => "filename"
+#
+# Clean up the temporary directory:
+#     p.cleanup
+#
+
 module Packer
   class Processor
     attr_reader :appname, :tmpdir, :buildpath, :builddir

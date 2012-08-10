@@ -3,6 +3,11 @@ require 'sinatra'
 require 'json'
 require 'packer'
 
+# Sinatra app to process github web-hook
+#
+# Point web-hooks to http://hostname:4567/git-hook
+#
+
 module Packer
   class WebApp < Sinatra::Base
     def self.get_args(params)

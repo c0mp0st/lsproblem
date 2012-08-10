@@ -18,6 +18,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency('trollop', '>= 1.16.2')
   gem.add_dependency('sinatra', '>= 1.3.2')
   gem.add_dependency('thin', '>= 1.4.1')
+  gem.add_dependency('foreman', '>= 0.53.0')
   gem.add_development_dependency('mocha', '0.12.3')
   gem.add_development_dependency('rack-test', '0.6.1')
 end
