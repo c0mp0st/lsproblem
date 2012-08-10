@@ -22,7 +22,7 @@ Command line options:
     Packer usage:
        --uri, -u <s>:   Specify Git URI
        --sha, -s <s>:   SHA1 to check out
-      --name, -n <s>:   Project name
+      --name, -n <s>:   Project name (used to name tarball)
       --dest, -d <s>:   Destination directory (default: current directory)
        --version, -v:   Print version and exit
           --help, -h:   Show this message
